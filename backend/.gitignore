@@ -1,0 +1,11 @@
+node_modules
+# Keep environment variables out of version control
+
+dist/
+build/
+database.sqlite
+
+.env
+logs/
+prisma/migrations/
+package-lock.json
