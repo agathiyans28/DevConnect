@@ -31,6 +31,9 @@ export function useLogout() {
   const queryClient = useQueryClient();
   return useMutation({
     mutationFn: async () => await logout(),
-    onSuccess: () => queryClient.setQueryData(["user"], null),
+    onSuccess: () => {
+      queryClient.clear();
+      localStorage.clear();
+    },
   });
 }
